@@ -5,7 +5,7 @@ import { useStateValue } from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
 
 function Checkout() {
-    const [{ cart }] = useStateValue();
+    const [{ cart, user }] = useStateValue();
 
     return (
         <div className="checkout">
@@ -17,6 +17,7 @@ function Checkout() {
                 />
                 {cart?.length === 0 ? (
                     <div>
+                        <h2></h2>
                         <h2>Your Shopping Cart is Empty</h2>
                         <p>
                             You have no items in your cart. To buy one or more

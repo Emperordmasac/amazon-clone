@@ -14,6 +14,12 @@ const reducer = (state, action) => {
                 user: action.user,
             };
 
+        case "EMPTY_CART":
+            return {
+                ...state,
+                cart: [],
+            };
+
         case "ADD_TO_CART":
             return {
                 ...state,
